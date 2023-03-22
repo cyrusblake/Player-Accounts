@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="p-5">
+        <form (ngSubmit)="onSubmit()">
+            <h3>Player Form</h3>
+            <input type="hidden" id="id" name="id" [(ngModel)]="model.id">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-contol" id="name" required name="name" [(ngModel)]="model.name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Race" class="form-label">Race</label>
+                    <input type="text" class="form-contol" id="race" required name="race" [(ngModel)]="model.race">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Class" class="form-label">Class</label>
+                    <input type="text" class="form-contol" id="class" required name="pclass" [(ngModel)]="model.pclass">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Level" class="form-label">Level</label>
+                    <input type="text" class="form-contol" id="level" required name="level" [(ngModel)]="model.level">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Server" class="form-label">Server</label>
+                    <input type="text" class="form-contol" id="server" required name="server" [(ngModel)]="model.server">
+                </div>
+                <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+
+    </div>
+</div>

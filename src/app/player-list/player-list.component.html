@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Players</h1>
+
+    <div *ngIf="selectedPlayer">
+        <br/>
+        <h4>{{selectedPlayer.name}}</h4>
+        <p>{{selectedPlayer.race}}</p>
+        <p>{{selectedPlayer.pclass}}</p>
+        <p>{{selectedPlayer.level}}</p>
+        <p>{{selectedPlayer.server}}</p>
+        <br/>
+        
+    </div>
+
+
+    <div *ngFor="let player of players" class="mb-5">
+        <p (click)="onSelect(player)" style="cursor: pointer;">
+            {{player.name}}
+        </p>
+        <a [routerLink] = "['/player', player.id]">Edit</a>
+        <br/>
+        <a (click)="onDelete(player)" class="link-primary" style="cursor: pointer">Delete</a>
+    </div>
+
+    <a [routerLink] ="['/player']" class="btn btn-primary">Add Player</a>
+
+   
+</div>
+
